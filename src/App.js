@@ -5,6 +5,7 @@ import Navbar from './components/Navbar';
 import TextFrom from './components/TextFrom';
 import { useState } from 'react';
 import React from 'react';
+import Footer from './components/Footer'
 function App() {
   const[ mode, setMode]= useState('light');
   const[alert,setalert]=useState(null)
@@ -37,7 +38,7 @@ function App() {
   <Alert alert={alert}/>
   <div className="container py-5"> 
        <TextFrom setalerts={setalerts}handing='Enter the text here' mode={mode}/>
-       
+       <Footer/>
   </div>
  
 </>
