@@ -41,7 +41,7 @@ export default function TextFrom(props) {
     return (
         <>
         <div className='container' style={{color:props.mode==='dark'?'white':'#1F618D'}}>
-                    <h1>{props.handing}</h1>
+                    <h1 className='handing'>{props.handing}</h1>
                     <div className="form-group">
                         <textarea className="form-control" id="mybox" rows="8"  value={text}  onChange={hendleonchane}style={{backgroundColor:props.mode==='dark'?'white':'gray'}}></textarea>
                     </div>
@@ -51,12 +51,12 @@ export default function TextFrom(props) {
                     <button className="btn btn-success mx-2 my-2"  onClick={hundlcopy}>Copy</button>
             </div>
             <div className="container py-3"style={{color:props.mode==='dark'?'white':'#1F618D'}}>
-                <h1>Your Text summary</h1>
+                <h1 className='handing'>Your Text summary</h1>
                 <p>{text.split(" ").length} words and {text.length}charcters</p>
                 <p>{0.008*text.split("").length}Minutes read</p>
             </div>
             <div className="container"style={{color:props.mode==='dark'?'white':'#1F618D'}} >
-                <h3>Perview</h3>
+                <h3 className='handing'>Perview</h3>
                 <p>{text.length>0?text:"Enter Something in the textbox above to perview it here"}</p>
             </div>
         </>
